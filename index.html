@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pusula Holding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAV
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="/" class="logo-link">
+        <img src="assets/logo.svg" alt="Pusula Holding" class="logo" />
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Hakkında <span class="arrow">&#8964;</span></a>
+            <div class="dropdown">
+              <a href="#hakkinda" class="dropdown-link">Bizi Tanıyın</a>
+              <a href="#yonetim" class="dropdown-link">Yönetim Kurulu</a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#faaliyet" class="nav-link">Faaliyet Alanları <span class="arrow">&#8964;</span></a>
+            <div class="dropdown">
+              <a href="#faaliyet" class="dropdown-link">Tasarruf Finansman</a>
+              <a href="#faaliyet" class="dropdown-link">Katılım Bankacılığı</a>
+              <a href="#faaliyet" class="dropdown-link">Menkul Değerler</a>
+              <a href="#faaliyet" class="dropdown-link">Portföy Yönetimi</a>
+              <a href="#faaliyet" class="dropdown-link">Gayrimenkul</a>
+              <a href="#faaliyet" class="dropdown-link">Otomotiv</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#yatirimci" class="nav-link">Yatırımcı İlişkileri</a>
+          </li>
+          <li class="nav-item">
+            <a href="#medya" class="nav-link">Medya Odası</a>
+          </li>
+          <li class="nav-item">
+            <a href="#iletisim" class="nav-link">İletişim</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SLIDER
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+
+      <div class="hero-slide active" style="--bg: url('assets/hero1.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">Pusula Holding</span>
+          <h1 class="hero-title">Geleceğe Değer<br>Katan Güçlü Bir<br>Ekosistem</h1>
+          <p class="hero-sub">Farklı sektörlerdeki uzmanlığımızla sürdürülebilir değer yaratıyoruz.</p>
+          <a href="#hakkinda" class="btn btn-primary">Bizi Tanıyın</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="--bg: url('assets/hero2.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">Faaliyet Alanları</span>
+          <h1 class="hero-title">Altı Sektörde<br>Entegre ve<br>Güçlü Yapı</h1>
+          <p class="hero-sub">Finanstan gayrimenkule, otomotivden portföy yönetimine geniş bir ekosistem.</p>
+          <a href="#faaliyet" class="btn btn-primary">Keşfedin</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="--bg: url('assets/hero3.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag">Sürdürülebilirlik</span>
+          <h1 class="hero-title">İnsana ve<br>Doğaya Saygıyla<br>Büyüyoruz</h1>
+          <p class="hero-sub">Etik ilkeler ve çevresel sorumluluk anlayışıyla geleceği şekillendiriyoruz.</p>
+          <a href="#hakkinda" class="btn btn-primary">Daha Fazla</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="hero-controls">
+      <button class="hero-prev" id="hero-prev" aria-label="Önceki">&#8592;</button>
+      <div class="hero-dots" id="hero-dots">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+      </div>
+      <button class="hero-next" id="hero-next" aria-label="Sonraki">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAND
+  ============================================================ -->
+  <section class="stats-band">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="7">0</span>
+        <span class="stat-label">Grup Şirketi</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="6">0</span>
+        <span class="stat-label">Faaliyet Alanı</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span>
+        <span class="stat-suffix">+</span>
+        <span class="stat-label">Çalışan</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2015">0</span>
+        <span class="stat-label">Kuruluş Yılı</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HAKKINDA
+  ============================================================ -->
+  <section class="about-section" id="hakkinda">
+    <div class="container about-inner">
+      <div class="about-text">
+        <span class="section-tag">Hakkımızda</span>
+        <h2 class="section-title">Finansal Güç,<br>Entegre Yapı,<br>Geleceğe Odak</h2>
+        <p class="section-desc">
+          Pusula Holding, farklı sektörlerdeki yatırımlarını profesyonel yönetim anlayışı ve etik ilkeler çerçevesinde yöneten, finansal açıdan güçlü, entegre ve geleceğe yönelik bir yapı içinde büyümeye devam etmektedir.
+        </p>
+        <p class="section-desc">
+          İnsana saygı, güvenilirlik, müşteri odaklılık, şeffaflık ve çevresel sorumluluk temel değerlerimizdir. Bu değerler, grubumuzun tüm şirketlerinde ortak bir kültürü oluşturmaktadır.
+        </p>
+        <a href="#faaliyet" class="btn btn-outline">Faaliyet Alanlarımız</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-card-grid">
+          <div class="about-value-card accent-blue">
+            <div class="value-icon">&#9670;</div>
+            <h4>İnsana Saygı</h4>
+            <p>Çalışanlarımızı ve paydaşlarımızı en büyük değerimiz olarak görürüz.</p>
+          </div>
+          <div class="about-value-card accent-dark">
+            <div class="value-icon">&#9670;</div>
+            <h4>Güvenilirlik</h4>
+            <p>Her ilişkimizde dürüstlük ve şeffaflığı esas alırız.</p>
+          </div>
+          <div class="about-value-card accent-dark">
+            <div class="value-icon">&#9670;</div>
+            <h4>Müşteri Odaklılık</h4>
+            <p>Müşteri memnuniyetini sürekli iyileştirmeyi taahhüt ederiz.</p>
+          </div>
+          <div class="about-value-card accent-blue">
+            <div class="value-icon">&#9670;</div>
+            <h4>Çevre Sorumluluğu</h4>
+            <p>Doğaya ve geleceğe duyarlı kararlar alırız.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FALİYET ALANLARI
+  ============================================================ -->
+  <section class="sectors-section" id="faaliyet">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Faaliyet Alanları</span>
+        <h2 class="section-title">Altı Temel Sektörde<br>Güçlü Varlık</h2>
+      </div>
+      <div class="sectors-grid">
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="20" width="40" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M4 30h40" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 20V12a8 8 0 0116 0v8" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Tasarruf Finansman</h3>
+          <p>Bireysel tasarruflara yönelik güvenli ve kârlı finansman çözümleri sunuyoruz.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M24 12v12l8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Katılım Bankacılığı</h3>
+          <p>Faizsiz bankacılık prensiplerine uygun, şeffaf ve güvenilir finansal hizmetler.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="4,36 16,22 26,30 44,10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="44" cy="10" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Menkul Değerler</h3>
+          <p>Sermaye piyasalarında uzman kadromuzla yatırımcılara aracılık hizmetleri.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 24h20M14 32h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 14l8 4-8 4V14z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Portföy Yönetimi</h3>
+          <p>Kurumsal ve bireysel yatırımcılar için profesyonel portföy yönetim hizmetleri.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 42V20l18-14 18 14v22" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="18" y="28" width="12" height="14" rx="1" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Gayrimenkul</h3>
+          <p>Konut ve ticari gayrimenkul projelerinde yenilikçi ve değer yaratan çözümler.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 32h36M10 32V26l4-12h20l4 12v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="32" cy="36" r="4" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Otomotiv</h3>
+          <p>Araç alım-satım ve finansman alanında güvenilir otomotiv hizmetleri.</p>
+          <a href="#" class="sector-link">Detaylar &#8594;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ŞİRKETLER
+  ============================================================ -->
+  <section class="companies-section" id="sirketler">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Grup Şirketleri</span>
+        <h2 class="section-title">Güçlü Şirketler,<br>Ortak Vizyon</h2>
+      </div>
+      <div class="companies-grid">
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Katılım Evim</span>
+          </div>
+          <div class="company-info">
+            <h4>Katılım Evim</h4>
+            <p>Tasarruf finansman sistemiyle ev sahibi olmanın güvenilir yolu.</p>
+            <span class="company-tag">Tasarruf Finansman</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Prime</span>
+          </div>
+          <div class="company-info">
+            <h4>Prime</h4>
+            <p>Katılım bankacılığı alanında yenilikçi finansal çözümler.</p>
+            <span class="company-tag">Katılım Bankacılığı</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Pusula Portföy</span>
+          </div>
+          <div class="company-info">
+            <h4>Pusula Portföy</h4>
+            <p>Kurumsal ve bireysel yatırımcılara profesyonel portföy yönetimi.</p>
+            <span class="company-tag">Portföy Yönetimi</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Pusula</span>
+          </div>
+          <div class="company-info">
+            <h4>Pusula Menkul</h4>
+            <p>Sermaye piyasalarında aracılık ve danışmanlık hizmetleri.</p>
+            <span class="company-tag">Menkul Değerler</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Bire Evim</span>
+          </div>
+          <div class="company-info">
+            <h4>Bire Evim</h4>
+            <p>Gayrimenkulde yeni nesil konut çözümleri ve danışmanlık.</p>
+            <span class="company-tag">Gayrimenkul</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">T6</span>
+          </div>
+          <div class="company-info">
+            <h4>T6</h4>
+            <p>Ticari gayrimenkul alanında stratejik yatırım ve geliştirme.</p>
+            <span class="company-tag">Gayrimenkul</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="company-logo-wrap">
+            <span class="company-logo-text">Katılım Oto</span>
+          </div>
+          <div class="company-info">
+            <h4>Katılım Oto</h4>
+            <p>Faizsiz araç finansmanı ve otomotiv danışmanlık hizmetleri.</p>
+            <span class="company-tag">Otomotiv</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       YATIRIMCI İLİŞKİLERİ
+  ============================================================ -->
+  <section class="investor-section" id="yatirimci">
+    <div class="container investor-inner">
+      <div class="investor-text">
+        <span class="section-tag light">Yatırımcı İlişkileri</span>
+        <h2 class="section-title light">Şeffaf ve Güvenilir<br>İletişim</h2>
+        <p class="section-desc light">
+          Pusula Holding olarak, tüm paydaşlarımızla şeffaf ve sürekli bir iletişim kurmayı taahhüt ediyoruz. Finansal raporlarımız ve faaliyet raporlarımız ile yatırımcılarımıza her zaman doğru ve güncel bilgi sunuyoruz.
+        </p>
+        <div class="investor-links">
+          <a href="#" class="investor-link-item">
+            <div class="investor-link-icon">&#128196;</div>
+            <div>
+              <strong>Finansal Raporlar</strong>
+              <span>Yıllık ve dönemsel raporlara erişin</span>
+            </div>
+            <span class="arrow-right">&#8594;</span>
+          </a>
+          <a href="#" class="investor-link-item">
+            <div class="investor-link-icon">&#128200;</div>
+            <div>
+              <strong>Faaliyet Raporları</strong>
+              <span>Stratejik gelişmeleri takip edin</span>
+            </div>
+            <span class="arrow-right">&#8594;</span>
+          </a>
+          <a href="#" class="investor-link-item">
+            <div class="investor-link-icon">&#128203;</div>
+            <div>
+              <strong>Kurumsal Yönetim</strong>
+              <span>Yönetim yapısı ve politikalarımız</span>
+            </div>
+            <span class="arrow-right">&#8594;</span>
+          </a>
+        </div>
+      </div>
+      <div class="investor-image-col">
+        <div class="investor-badge-group">
+          <div class="investor-badge">
+            <span class="badge-num">2015</span>
+            <span class="badge-label">Kuruluş Yılı</span>
+          </div>
+          <div class="investor-badge highlight">
+            <span class="badge-num">7</span>
+            <span class="badge-label">Grup Şirketi</span>
+          </div>
+          <div class="investor-badge">
+            <span class="badge-num">6</span>
+            <span class="badge-label">Faaliyet Alanı</span>
+          </div>
+          <div class="investor-badge highlight">
+            <span class="badge-num">500+</span>
+            <span class="badge-label">Uzman Çalışan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEDYA / HABERLER
+  ============================================================ -->
+  <section class="news-section" id="medya">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Medya Odası</span>
+        <h2 class="section-title">Haberler &amp;<br>Duyurular</h2>
+      </div>
+      <div class="news-grid">
+
+        <div class="news-card featured">
+          <div class="news-image" style="background: linear-gradient(135deg, #101828 0%, #444CE7 100%);">
+            <span class="news-category">Kurumsal</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date">15 Şubat 2026</span>
+            <h3>Pusula Holding, 2025 Faaliyet Raporunu Yayımladı</h3>
+            <p>Grubun yıllık performansını ve stratejik hedeflerini kapsayan 2025 faaliyet raporu kamuoyuyla paylaşıldı.</p>
+            <a href="#" class="news-read-more">Devamını Oku &#8594;</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-image" style="background: linear-gradient(135deg, #1D2939 0%, #344054 100%);">
+            <span class="news-category">Sektör</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date">3 Şubat 2026</span>
+            <h3>Katılım Oto, Araç Finansman Portföyünü Genişletiyor</h3>
+            <p>Faizsiz araç finansmanı alanında yeni ürün ve hizmetler devreye alındı.</p>
+            <a href="#" class="news-read-more">Devamını Oku &#8594;</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-image" style="background: linear-gradient(135deg, #101828 0%, #1D2939 100%);">
+            <span class="news-category">Gayrimenkul</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date">20 Ocak 2026</span>
+            <h3>Bire Evim ile Yeni Konut Projelerinde İşbirliği</h3>
+            <p>Gayrimenkul sektöründe stratejik ortaklıklar ve yeni projelerle büyüme hız kazanıyor.</p>
+            <a href="#" class="news-read-more">Devamını Oku &#8594;</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="news-cta">
+        <a href="#" class="btn btn-outline">Tüm Haberler</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       İLETİŞİM
+  ============================================================ -->
+  <section class="contact-section" id="iletisim">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <span class="section-tag">İletişim</span>
+        <h2 class="section-title">Bize Ulaşın</h2>
+        <p class="section-desc">Sorularınız ve işbirliği teklifleriniz için bizimle iletişime geçebilirsiniz.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">&#128222;</span>
+            <div>
+              <strong>Telefon</strong>
+              <a href="tel:02167400770">0 (216) 740 07 70</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9993;</span>
+            <div>
+              <strong>E-posta</strong>
+              <a href="mailto:info@pusulaholding.com.tr">info@pusulaholding.com.tr</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#128205;</span>
+            <div>
+              <strong>Adres</strong>
+              <span>İstanbul, Türkiye</span>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/pusulaholding" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ad Soyad</label>
+            <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" placeholder="ornek@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Konu</label>
+          <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Mesaj</label>
+          <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Gönder</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/logo-footer.svg" alt="Pusula Holding" class="logo footer-logo-img" />
+        </a>
+        <p>Geleceğe değer katan güçlü bir ekosistem.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/pusulaholding" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Hakkında</h5>
+        <ul>
+          <li><a href="#hakkinda">Bizi Tanıyın</a></li>
+          <li><a href="#yonetim">Yönetim Kurulu</a></li>
+          <li><a href="#sirketler">Grup Şirketleri</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Faaliyet Alanları</h5>
+        <ul>
+          <li><a href="#faaliyet">Tasarruf Finansman</a></li>
+          <li><a href="#faaliyet">Katılım Bankacılığı</a></li>
+          <li><a href="#faaliyet">Menkul Değerler</a></li>
+          <li><a href="#faaliyet">Portföy Yönetimi</a></li>
+          <li><a href="#faaliyet">Gayrimenkul</a></li>
+          <li><a href="#faaliyet">Otomotiv</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Kurumsal</h5>
+        <ul>
+          <li><a href="#yatirimci">Yatırımcı İlişkileri</a></li>
+          <li><a href="#medya">Medya Odası</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+          <li><a href="#">Kariyer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2026 Pusula Holding. Tüm hakları saklıdır.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">KVKK</a>
+          <a href="#">Çerez Politikası</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
