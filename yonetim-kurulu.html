@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yönetim Kurulu – Pusula Holding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero {
+      background: var(--color-navy);
+      padding: 120px 0 48px;
+      text-align: center;
+    }
+    .page-hero .section-tag { color: rgba(165,180,252,0.9); }
+    .page-hero .section-title { color: var(--color-white); margin-bottom: 0; }
+
+    .board-section {
+      padding: 80px 0 100px;
+      background: var(--color-light);
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .board-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .board-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 56px rgba(16,24,40,0.12);
+      border-color: transparent;
+    }
+
+    .board-avatar {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy2) 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .board-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .board-card:hover .board-photo {
+      transform: scale(1.03);
+    }
+
+    .board-avatar-initials {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(68,76,231,0.25);
+      border: 2px solid rgba(68,76,231,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-white);
+      letter-spacing: 0.04em;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .board-info {
+      padding: 28px 28px 32px;
+    }
+
+    .board-info h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 6px;
+    }
+
+    .board-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .board-info p {
+      font-size: 14px;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .board-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .page-hero { padding: 120px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header scrolled" id="site-header">
+    <div class="header-inner container">
+      <a href="/" class="logo-link">
+        <img src="assets/pusula-logo-main.png" alt="Pusula Holding" class="logo" />
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Hakkında <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown">
+              <a href="/#hakkinda" class="dropdown-link">Bizi Tanıyın</a>
+              <a href="yonetim-kurulu.html" class="dropdown-link">Yönetim Kurulu</a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="/#faaliyet" class="nav-link">Faaliyet Alanları <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown">
+              <a href="/#faaliyet" class="dropdown-link">Tasarruf Finansman</a>
+              <a href="/#faaliyet" class="dropdown-link">Katılım Bankacılığı</a>
+              <a href="/#faaliyet" class="dropdown-link">Menkul Değerler</a>
+              <a href="/#faaliyet" class="dropdown-link">Portföy Yönetimi</a>
+              <a href="/#faaliyet" class="dropdown-link">Gayrimenkul</a>
+              <a href="/#faaliyet" class="dropdown-link">Otomotiv</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="/#yatirimci" class="nav-link">Yatırımcı İlişkileri</a></li>
+          <li class="nav-item"><a href="/#medya" class="nav-link">Medya Odası</a></li>
+          <li class="nav-item"><a href="/#iletisim" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="section-title">Yönetim Kurulu</h1>
+    </div>
+  </section>
+
+  <section class="board-section">
+    <div class="container">
+
+      <div class="board-grid">
+
+        <div class="board-card">
+          <div class="board-avatar">
+            <img src="assets/serdar-turhan.jpg" alt="Serdar Turhan" class="board-photo" />
+          </div>
+          <div class="board-info">
+            <h3>Serdar Turhan</h3>
+            <span class="board-title">Yönetim Kurulu Başkanı</span>
+            <p>Anadolu Üniversitesi İktisat bölümü mezunu (2008–2012). 2010 yılında Turyapı Grup'ta inşaat sektöründe başladığı kariyerinde Genel Müdürlük görevine kadar yükseldi. 2015'te Miem Yapı İnşaat'ta Yönetim Kurulu Başkanlığı görevini üstlendi. 2018'de Katılımevim'i kurarak Yönetim Kurulu Başkanlığını üstlendi. Hâlihazırda Pusula Holding'i yönetmektedir.</p>
+          </div>
+        </div>
+
+        <div class="board-card">
+          <div class="board-avatar">
+            <img src="assets/ahmet-ozcan.jpg" alt="Ahmet Özcan" class="board-photo" />
+          </div>
+          <div class="board-info">
+            <h3>Ahmet Özcan</h3>
+            <span class="board-title">Yönetim Kurulu Üyesi</span>
+            <p>Bilkent Üniversitesi İşletme bölümü mezunu (1999). Yapı Kredi Bankası Teftiş Kurulu'nda başladığı kariyerinde kıdemli müfettişlik, şube müdürlüğü ve iç denetim direktörlüğü görevlerini yürüttü. 2015'ten itibaren Eminevim'de Finans Direktörü ve İş Geliştirme & Pazarlama Direktörü olarak görev yaptı. Katılımevim'de Genel Müdür ve Yönetim Kurulu Üyesi olarak görev yapmakta olup aynı zamanda Türkiye Bankalar Birliği Risk Merkezi Yönetim Kurulu Üyesidir.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/pusula-logo-main.png" alt="Pusula Holding" class="logo footer-logo-img" />
+        </a>
+        <p>Geleceğe değer katan güçlü bir ekosistem.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Hakkında</h5>
+        <ul>
+          <li><a href="/#hakkinda">Bizi Tanıyın</a></li>
+          <li><a href="yonetim-kurulu.html">Yönetim Kurulu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Kurumsal</h5>
+        <ul>
+          <li><a href="/#yatirimci">Yatırımcı İlişkileri</a></li>
+          <li><a href="/#medya">Medya Odası</a></li>
+          <li><a href="/#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2026 Pusula Holding. Tüm hakları saklıdır.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">KVKK</a>
+          <a href="#">Çerez Politikası</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('main-nav');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      mainNav.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  </script>
+
+</body>
+</html>

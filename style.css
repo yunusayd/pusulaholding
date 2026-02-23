@@ -120,21 +120,25 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: rgba(255,255,255,0.08);
 }
 
-.arrow { font-size: 16px; line-height: 1; }
+.arrow {
+  display: block;
+  flex-shrink: 0;
+}
 
 /* Dropdown */
 .dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 0;
   min-width: 220px;
   background: var(--color-white);
   border-radius: var(--radius);
   box-shadow: 0 16px 48px rgba(16,24,40,0.18);
-  padding: 8px;
+  padding: 16px 8px 8px;
+  margin-top: 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
   pointer-events: none;
 }
@@ -350,7 +354,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
 }
 
@@ -611,6 +615,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--color-white);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.company-logo-img {
+  max-height: 44px;
+  max-width: 60%;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 6px;
 }
 
 .company-info {
